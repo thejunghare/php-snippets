@@ -1,4 +1,5 @@
- $filename = basename($_FILES['file']['name']);
+<?php
+$filename = basename($_FILES['file']['name']);
     $tempFileName = $_FILES['file']['tmp_name'];
     $upload_dir = '../pdf/navbar-attachment/';
     $error = null;
@@ -13,3 +14,4 @@
 
         }
     }
+?>
