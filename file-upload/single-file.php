@@ -1,8 +1,13 @@
 <?php
 $filename = basename($_FILES['file']['name']);
     $tempFileName = $_FILES['file']['tmp_name'];
-    $upload_dir = '../pdf/navbar-attachment/';
+    $upload_dir = './pdf/';
     $error = null;
+
+if (!file_exists($upload_dir)) {
+        mkdir('./pdf/', 0777, true);
+    }
+
 
     if ($error == UPLOAD_ERR_OK) {
         if (move_uploaded_file($tempFileName, "$upload_dir/$filename")) {
