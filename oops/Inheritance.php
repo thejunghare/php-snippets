@@ -44,4 +44,4 @@ class Honda extends Bike
 $honda = new Honda("CB Shine");
 $honda->message();
 $honda->getname();
-$honda->intro(); # ERROR
+$honda->intro(); # ERROR if used with out overriding
